@@ -1,9 +1,9 @@
-# Node.js v4.2 (Long Term Support)
-# docker run --rm pottava/nodejs:4.2 node -v
+# Node.js v5.4
+# docker run --rm pottava/nodejs:5.4 node -v
 
 FROM alpine:3.3
 
-ENV NODE_VERSION=4.2.4
+ENV NODE_VERSION=5.4.1
 
 RUN apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers binutils-gold python curl \
       && apk --no-cache add libgcc libstdc++ \
