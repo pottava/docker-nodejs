@@ -29,7 +29,10 @@ RUN apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers b
       && grep " node-v${NODE_VERSION}.tar.gz\$" SHASUMS256.txt.asc | sha256sum -c - \
       && tar -xzf "node-v${NODE_VERSION}.tar.gz" \
       && cd /tmp/src/node-v${NODE_VERSION} \
-      && ./configure --prefix=/opt/node --fully-static \
+      && ./configure \
+          --prefix=/opt/node \
+          --without-snapshot \
+          --fully-static \
       && make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
       && make install \
       && cd / \
