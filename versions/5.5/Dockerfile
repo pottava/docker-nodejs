@@ -9,7 +9,6 @@ ENV NODE_VERSION=5.5.0
 RUN set -ex \
       && apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers binutils-gold python curl paxctl gpgme \
       && apk --no-cache add libgcc libstdc++ \
-      && set -ex \
       && for key in \
             9554F04D7259F04124DE6B476D5A82AC7E37093B \
             94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
