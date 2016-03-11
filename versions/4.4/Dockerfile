@@ -1,14 +1,14 @@
-# Node.js v5.4
-# docker run --rm pottava/nodejs:5.4 node -v
-# docker run --rm pottava/nodejs:5.4 npm -v
+# Node.js v4.4 (Long Term Support)
+# docker run --rm pottava/nodejs:4.4 node -v
+# docker run --rm pottava/nodejs:4.4 npm -v
 
 FROM alpine:3.3
 
-ENV NODE_VERSION=5.4.1
+ENV NODE_VERSION=4.4.0
 
-RUN apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers binutils-gold python curl paxctl gpgme \
+RUN set -ex \
+      && apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers binutils-gold python curl paxctl gpgme \
       && apk --no-cache add libgcc libstdc++ \
-      && set -ex \
       && for key in \
             9554F04D7259F04124DE6B476D5A82AC7E37093B \
             94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
@@ -16,8 +16,8 @@ RUN apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers b
             FD3A5288F042B6850C66B31F09FE44734EB7990E \
             71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 \
             DD8F2338BAE7501E3DD5AC78C273792F7D83545D \
-            C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
             B9AE9905FFD7803F25714661B63B535A4C206CA9 \
+            C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
           ; do \
             gpg --keyserver keyserver.ubuntu.com --recv-keys "$key"; \
           done \

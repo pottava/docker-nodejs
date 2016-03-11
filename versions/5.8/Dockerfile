@@ -1,10 +1,10 @@
-# Node.js v5.6
-# docker run --rm pottava/nodejs:5.6 node -v
-# docker run --rm pottava/nodejs:5.6 npm -v
+# Node.js v5.8
+# docker run --rm pottava/nodejs:5.8 node -v
+# docker run --rm pottava/nodejs:5.8 npm -v
 
 FROM alpine:3.3
 
-ENV NODE_VERSION=5.6.0
+ENV NODE_VERSION=5.8.0
 
 RUN set -ex \
       && apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers binutils-gold python curl paxctl gpgme \
