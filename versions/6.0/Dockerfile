@@ -4,7 +4,7 @@
 
 FROM alpine:3.3
 
-ENV NPM_CONFIG_LOGLEVEL info \
+ENV NPM_CONFIG_LOGLEVEL=info \
     NODE_VERSION=6.0.0
 
 RUN set -ex \
