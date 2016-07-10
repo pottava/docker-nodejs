@@ -2,10 +2,10 @@
 # docker run --rm pottava/nodejs:6.2 node -v
 # docker run --rm pottava/nodejs:6.2 npm -v
 
-FROM alpine:3.3
+FROM alpine:3.4
 
 ENV NPM_CONFIG_LOGLEVEL=info \
-    NODE_VERSION=6.2.1
+    NODE_VERSION=6.2.2
 
 RUN set -ex \
       && apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers binutils-gold python curl paxctl gpgme \

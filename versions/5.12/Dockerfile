@@ -1,10 +1,11 @@
-# Node.js v5.7
-# docker run --rm pottava/nodejs:5.7 node -v
-# docker run --rm pottava/nodejs:5.7 npm -v
+# Node.js v5.12
+# docker run --rm pottava/nodejs:5.12 node -v
+# docker run --rm pottava/nodejs:5.12 npm -v
 
-FROM alpine:3.3
+FROM alpine:3.4
 
-ENV NODE_VERSION=5.7.0
+ENV NPM_CONFIG_LOGLEVEL=info \
+    NODE_VERSION=5.12.0
 
 RUN set -ex \
       && apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers binutils-gold python curl paxctl gpgme \
