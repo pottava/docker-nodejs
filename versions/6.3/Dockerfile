@@ -5,7 +5,7 @@
 FROM alpine:3.4
 
 ENV NPM_CONFIG_LOGLEVEL=info \
-    NODE_VERSION=6.3.0
+    NODE_VERSION=6.3.1
 
 RUN set -ex \
       && apk --no-cache add --virtual build-dependencies make gcc g++ linux-headers binutils-gold python curl paxctl gpgme \
