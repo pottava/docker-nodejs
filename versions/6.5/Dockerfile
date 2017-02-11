@@ -38,7 +38,7 @@ RUN set -ex \
       && make install \
       && cd / \
       && paxctl -cm /opt/node/bin/node \
-      && apk del --purge build-dependencies \
+      && apk del --purge -r build-dependencies \
       && rm -rf /tmp/* \
           /etc/ssl \
           /opt/node/include/ \
